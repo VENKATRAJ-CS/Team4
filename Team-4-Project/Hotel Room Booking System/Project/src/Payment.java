@@ -10,7 +10,7 @@ public class Payment {
     }
 
     public void processPayment(Scanner sc) {
-        double ratePerNight = (roomType == 1) ? 1500 : 1000;  // Assume AC room costs 1500 per night, Non-AC costs 1000
+        double ratePerNight = (roomType == 1) ? 1500 : 1000;  
         double totalCost = ratePerNight * nights;
 
         System.out.println("Total cost for " + nights + " nights: ₹" + totalCost);
