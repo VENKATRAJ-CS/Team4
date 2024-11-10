@@ -6,10 +6,8 @@ public class HotelApp {
         Scanner sc = new Scanner(System.in);
         Signup signup = new Signup();
         
-        // Load customer details from the file
         signup.loadCustomerDetails();
         
-        // Pass the customer map to Login class
         Login login = new Login(Signup.customer);
 
         while (true) {
@@ -20,12 +18,12 @@ public class HotelApp {
             System.out.println("3) Exit");
             System.out.print("Choose an option: ");
             int option = sc.nextInt();
-            sc.nextLine(); // Consume newline
+            sc.nextLine(); 
 
             if (option == 1) {
-                signup.signup(sc);  // Handle signup
+                signup.signup(sc);  
             } else if (option == 2) {
-                login.login(sc);  // Handle login
+                login.login(sc);
             } else {
                 System.out.println("Exiting...");
                 break;
