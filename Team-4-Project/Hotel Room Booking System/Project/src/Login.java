@@ -31,7 +31,7 @@ public class Login {
 
                 if (vacateOption == 1) {
                     vacateRoom(cd.getBookedRoomNo());
-                    cd.setBookedRoomNo(-1);  // Reset booked room for the customer
+                    cd.setBookedRoomNo(-1);  
                 }
             } else {
                 System.out.println("You have not booked any room yet.");
@@ -43,9 +43,9 @@ public class Login {
 
     private void vacateRoom(int roomNo) {
         if (roomNo >= 1 && roomNo <= 30 && !Signup.roomAvailability[roomNo]) {
-            Signup.roomAvailability[roomNo] = true; // Mark room as available again
+            Signup.roomAvailability[roomNo] = true; 
             System.out.println("Room No: " + roomNo + " vacated successfully.");
-            System.out.println("Thank You For Using Our Easy Rest Hotel ...Visit Again🙏🙏🙏🙏🙏");
+            System.out.println("Thank You For Using Our Easy Rest Hotel ...Visit Again😀😀😀😀");
         } else {
             System.out.println("Invalid room number or the room was not booked.");
         }
@@ -77,7 +77,7 @@ public class Login {
             sc.nextLine();
 
             if (isRoomAvailable(roomNo)) {
-                Signup.roomAvailability[roomNo] = false; // Mark room as unavailable
+                Signup.roomAvailability[roomNo] = false; 
                 cd.setBookedRoomNo(roomNo);
                 System.out.println("Room No: " + roomNo + " Selected successfully.");
                 break;
@@ -102,7 +102,7 @@ public class Login {
             Payment payment = new Payment(roomType, nights, cd, totalCost);
             payment.processPayment(sc);
         } else {
-            // If booking is canceled, mark the room as available again
+            
             Signup.roomAvailability[roomNo] = true;
             System.out.println("Booking canceled, room No: " + roomNo + " is available again.");
         }
