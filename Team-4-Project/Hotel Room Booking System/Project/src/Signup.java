@@ -40,9 +40,9 @@ public class Signup {
                     int bookedRoomNo = Integer.parseInt(details[4].trim());
 
                     customer.put(String.valueOf(id), new CustomerDetails(name, mobileNo, aadharNo, id, bookedRoomNo));
-                    // Mark room availability based on booked rooms
+                    
                     if (bookedRoomNo != -1) {
-                        roomAvailability[bookedRoomNo] = false;  // Mark room as unavailable if booked
+                        roomAvailability[bookedRoomNo] = false;  
                     }
                 }
             }
