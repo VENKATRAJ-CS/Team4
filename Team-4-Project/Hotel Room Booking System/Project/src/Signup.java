@@ -4,12 +4,12 @@ import java.util.*;
 public class Signup {
     static Map<String, CustomerDetails> customer = new HashMap<>();
     private static final String CUSTOMER_DETAILS_FILE = "customerDetails.txt";
-    private static final String ROOM_BOOKINGS_FILE = "roomBookings.txt"; // To persist room booking info
+    private static final String ROOM_BOOKINGS_FILE = "roomBookings.txt"; 
 
-    // Room availability array
-    public static boolean[] roomAvailability = new boolean[31]; // Index 0 is unused, 1-30 represent rooms
+    
+    public static boolean[] roomAvailability = new boolean[31]; 
     static {
-        // Initialize all rooms as available (true)
+        
         for (int i = 1; i <= 30; i++) {
             roomAvailability[i] = true;
         }
